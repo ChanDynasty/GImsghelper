@@ -43,7 +43,6 @@
     display: flex;
     align-items: center;
     position: relative;
-    min-height: 50vh;
   }
   .hero-left {
     flex-basis: 40%;
@@ -62,16 +61,30 @@
     padding: 0 20px;
     position: relative;
   }
-  
+  .img-credit-text {
+    position: absolute;
+    z-index: 2;
+    font-size: 10px;
+    top: auto;
+    right: auto;
+    left: 60px;
+    bottom: 5px;
+    margin: 0;
+    font-style: italic;
+  }
+  .img-credit-link {
+    color: white;
+    transition-duration: 200ms;
+  }
+  .img-credit-link:hover {
+    color: var(--swatch-2);
+    filter: brightness(120%);
+  }
   .cover-image {
     width: 60%;
     padding-top: 40%;
     z-index: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: auto;
-    right: 0;
+    position: relative;
   }
   .image-fill {
     position: absolute;
@@ -113,7 +126,7 @@
   .button-holder {
     display: flex;
     align-items: center;
-    margin: -10px -7px;
+    margin: -10px -8px;
     flex-wrap: wrap;
   }
   .master-button {
@@ -122,45 +135,30 @@
     background-color: var(--swatch-1);
     color: white;
     font-size: 16px;
-    padding: 15px 25px 20px;
-    margin: 10px 7px;
+    padding: 15px 25px 16px;
+    margin: 10px 8px;
     border-radius: 16px;
     font-weight: 500;
     transition-duration: 250ms;
     cursor: pointer;
   }
   .master-button:hover {
-    background-color: #657082;
+    filter: brightness(120%);
   }
   .secondary-button {
     background-color: var(--swatch-2);
   }
-  .secondary-button:hover {
-    background-color: #deb76c;
-  }
   .anemo-button {
     background-color: var(--anemo-theme);
-  }
-  .anemo-button:hover {
-    background-color: #8fd9c1;
   }
   .geo-button {
     background-color: var(--geo-theme);
   }
-  .geo-button:hover {
-    background-color: #f0c062;
-  }
   .electro-button {
     background-color: var(--electro-theme);
   }
-  .electro-button:hover {
-    background-color: #ccafdb;
-  }
   .dendro-button {
     background-color: var(--dendro-theme);
-  }
-  .dendro-button:hover {
-    background-color: #c1d977;
   }
   .result-value {
     font-size: 20px;
@@ -260,6 +258,9 @@
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+  }
+  .result-div {
+    padding: 0 0 40px;
   }
   
   /* Rounded sliders */

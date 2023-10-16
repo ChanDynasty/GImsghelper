@@ -7,7 +7,7 @@ function setValue(newDomain) {
 
 function updatePhrase() {
   switch (domain) {
-    case "forsaken":
+    case "forsaken": //Mondstadt Domains
       document.getElementById("phrase").innerHTML =
         "Forsaken Rift (Mondstadt talent domain)";
       break;
@@ -27,7 +27,7 @@ function updatePhrase() {
       document.getElementById("phrase").innerHTML =
         "Valley of Rememberance (Anemo/Maiden artifact domain)";
       break;
-    case "taishan":
+    case "taishan": // Liyue Domains
       document.getElementById("phrase").innerHTML =
         "Taishan Mansion (Liyue talent domain)";
       break;
@@ -55,7 +55,7 @@ function updatePhrase() {
       document.getElementById("phrase").innerHTML =
         "The Lost Valley (Echoes/Vermillion artifact domain)";
       break;
-    case "violet":
+    case "violet": // Inazuma Domains
       document.getElementById("phrase").innerHTML =
         "Violet Court (Inazuma talent domain)";
       break;
@@ -71,7 +71,7 @@ function updatePhrase() {
       document.getElementById("phrase").innerHTML =
         "Slumbering Court (Opulent/Ocean-Hued artifact domain)";
       break;
-    case "ignorance":
+    case "ignorance": // Sumeru Domains
       document.getElementById("phrase").innerHTML =
         "Steeple of Ignorance (Sumeru talent domain)";
       break;
@@ -87,7 +87,23 @@ function updatePhrase() {
       document.getElementById("phrase").innerHTML =
         "Spire of Solitary Enlightment (Dendro/Guilded artifact domain)";
       break;
-    case "boreas":
+    case "paleforgotten": // Fontaine Domains
+      document.getElementById("phrase").innerHTML =
+        "Pale Forgotten Glory (Fontaine talent domain)";
+      break;
+    case "echoesofdeep":
+      document.getElementById("phrase").innerHTML =
+        "Echoes of the Deep Tides (Fontaine weapon domain)";
+      break;
+    case "denouement":
+      document.getElementById("phrase").innerHTML =
+        "Denouement of Sin (Golden Troupe/Marechaussee artifact domain)";
+      break;
+    case "molteniron":
+      document.getElementById("phrase").innerHTML =
+        "Molten Iron Fortress (Nymph's Dream/Vourukasha's Glow artifact domain)";
+      break;
+    case "boreas": // Trounce Domains
       document.getElementById("phrase").innerHTML =
         "Wolf of the North Challenge (Andrius)";
       break;
@@ -114,6 +130,10 @@ function updatePhrase() {
     case "scaramouche":
       document.getElementById("phrase").innerHTML =
         "Joururi Workshop (Everlasting Lord of Arcane Wisdom)";
+      break;
+    case "apep":
+      document.getElementById("phrase").innerHTML =
+        "The Realm of Beginnings (Guardian of Apep's Oasis)";
       break;
     default:
       document.getElementById("phrase").innerHTML =
@@ -189,3 +209,17 @@ runInp.addEventListener("input", () => {
   let inpVal = runInp.value;
   runVal.innerHTML = inpVal;
 });
+
+function copyToClipboard() {
+  var text = document.getElementById("grab-text").textContent;
+
+  // Create a Clipboard API writeText request
+  navigator.clipboard.writeText(text)
+      .then(function() {
+          // Provide user feedback
+          alert("Text copied!");
+      })
+      .catch(function(err) {
+          console.error('Could not copy text!', err);
+      });
+}
