@@ -3,3 +3,4 @@ This webpage is a quick method of generating a help message for co-op users. Som
 
 Please report in the issues, if any instance of this page does not work.
 
+[Quick link can be found here.](https://kaa-hong.github.io/GImsghelper/)
