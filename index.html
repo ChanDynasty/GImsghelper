@@ -12,6 +12,9 @@
   </head>
   
   <body>
+    <a class="page-down-btn" href="#copy-btn">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.33331V31.6666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M31.6667 20L20 31.6667L8.33337 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
     <section class="hero-section">
       <div class="global-div">
         <div class="hero-div">
@@ -24,7 +27,6 @@
             <div class="gradient-fill gradient-reversed"></div>
             <p class="img-credit-text">Image sourced from <a class="img-credit-link" target="_blank" href="https://www.polygon.com/genshin-impact-guides/22606028/formation-estate-unlock-domain-seelie-location-world-quest-map-orobashis-legacy-npc">Polygon</a>.</p>
             <img class="image-fill" src="https://cdn.vox-cdn.com/thumbor/974tsOLG8GT-Imj1iDG3-pEV1p0=/0x0:1440x900/1200x800/filters:focal(756x314:986x544)/cdn.vox-cdn.com/uploads/chorus_image/image/69690849/20218215846.0.png" alt="cover image" />
-            
           </div>
         </div>
       </div>
@@ -158,13 +160,14 @@
           </div>
         </div>
         <p class="msg-notice">Copy the text below and paste into any messaging platform. At the moment there are no means to be able to get a lowered world level on an ascension rank on this message generator. For example if you are on AR45 and have yet to do the ascension from WL5 to WL6, however, have lowered your world level to WL4, you can manually change it before sending the copied message. Keep in mind if you raise your world level, you can gain additional rewards using the help you requested.</p>
-        <div class="result-div">
-          <p class="result-value" id="grab-text">Looking for help:<br>
-            Domain: <span id="phrase">Click a button to set the requested domain.</span><br>
-            Adventure Rank: <span id="adv-rank"></span> - WL<span id="wrld-lvl"></span> <span contenteditable="true" style="color:var(--swatch-2);">Click here and replace with UID</span><br>
-            Runs: <span id="num-of-runs" /></p>
+        <div class="result-div" >
+          <p class="result-value" id="grab-text">
+Looking for help:<br>
+Domain: <span id="phrase">Click a button to set the requested domain.</span><br>
+Adventure Rank: <span id="adv-rank"></span> - WL<span id="wrld-lvl"></span> <span contenteditable="true" style="color:var(--swatch-2);">Triple click here and replace with UID</span><br>
+Runs: <span id="num-of-runs"></span></p>
         </div>
-        <div class="button-holder"><div class="master-button" onclick="copyToClipboard()">Click to copy</div></div>
+        <div id="copy-btn" class="button-holder"><div class="master-button" onclick="copyToClipboard()">Click to copy</div></div>
       </div>
     </section>
     <script src="script.js"></script>

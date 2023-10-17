@@ -29,6 +29,23 @@
     font-size: 34px;
     line-height: 1.2em;
   }
+  .page-down-btn {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    z-index: 3;
+    padding: 10px;
+    background-color: #333333;
+    max-width: 40px;
+    max-height: 40px;
+    color: white;
+  }
+  .page-down-btn:hover {
+    color: var(--swatch-2);
+    filter: brightness(120%);
+  }
   .hero-section {
     background-color: var(--swatch-1);
     margin: 0;
@@ -51,7 +68,7 @@
   .global-section {
     margin: 0 auto;
     max-width: 2560px;
-    padding: 40px 0;
+    padding: 60px 0;
     background-color: var(--dark-mode);
     color: white;
   }
@@ -71,6 +88,7 @@
     bottom: 5px;
     margin: 0;
     font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
   }
   .img-credit-link {
     color: white;
@@ -271,4 +289,3 @@
   .slider.round:before {
     border-radius: 50%;
   }
-  
