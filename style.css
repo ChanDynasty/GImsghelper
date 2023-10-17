@@ -10,6 +10,9 @@
     --electro-theme: #a687b7;
     --hydro-theme: #49b8e5;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: "Murecho", sans-serif;
     padding: 0;
