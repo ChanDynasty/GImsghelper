@@ -211,15 +211,17 @@ runInp.addEventListener("input", () => {
 });
 
 function copyToClipboard() {
-  var text = document.getElementById("grab-text").textContent;
-
+  let text = document.getElementById("grab-text").textContent;
+  const successPop = document.getElementById('cpy-popup');
+  const errorPop = document.getElementById('err-popup');
   // Create a Clipboard API writeText request
   navigator.clipboard.writeText(text)
       .then(function() {
-          // Provide user feedback
-          alert("Text copied!");
+          successPop.classList.add('pop-show');
+          setTimeout(() => {successPop.classList.remove('pop-show')}, 1200);
       })
       .catch(function(err) {
-          console.error('Could not copy text!', err);
+        errorPop.classList.add('pop-show');
+        setTimeout(() => {errorPop.classList.remove('pop-show')}, 1200);
       });
 }

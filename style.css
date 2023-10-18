@@ -1,3 +1,4 @@
+/* Colour variables */
 :root {
     --swatch-1: #495467;
     --swatch-2: #a18858;
@@ -10,6 +11,7 @@
     --electro-theme: #a687b7;
     --hydro-theme: #49b8e5;
   }
+/* Main elements */
   html {
     scroll-behavior: smooth;
   }
@@ -27,10 +29,56 @@
     font-weight: 600;
     line-height: 1.2em;
   }
-  
   h2 {
     font-size: 34px;
     line-height: 1.2em;
+  }
+
+  /*Class Elements */
+  .cpy-pop {
+    position: fixed;
+    top: auto;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    max-width: 150px;
+    background-color: rgba(73, 84, 103, 0.7);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px 15px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    border-radius: 5px;
+    transition-duration: 200ms;
+  }
+  .error-pop {
+    position: fixed;
+    top: auto;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    max-width: 340px;
+    background-color: rgba(240, 80, 80, 0.7);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px 15px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    border-radius: 5px;
+    transition-duration: 200ms;
+  }
+  .pop-show {
+    opacity: 100%;
   }
   .page-down-btn {
     position: fixed;
