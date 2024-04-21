@@ -103,6 +103,14 @@ function updatePhrase() {
       document.getElementById("phrase").innerHTML =
         "Molten Iron Fortress (Nymph's Dream/Vourukasha's Glow artifact domain)";
       break;
+    case "waterfallwen":
+      document.getElementById("phrase").innerHTML =
+        "Waterfall Wen (Songs of Days Past/Nighttime Whispers artifact domain)";
+      break;
+    case "fadedtheater":
+      document.getElementById("phrase").innerHTML =
+        "Faded Theater (Unfinished Reverie/Fragment of Harmonic Whimsy artifact domain)";
+      break;
     case "boreas": // Trounce Domains
       document.getElementById("phrase").innerHTML =
         "Wolf of the North Challenge (Andrius)";
@@ -134,6 +142,10 @@ function updatePhrase() {
     case "apep":
       document.getElementById("phrase").innerHTML =
         "The Realm of Beginnings (Guardian of Apep's Oasis)";
+      break;
+    case "narwhal":
+      document.getElementById("phrase").innerHTML =
+        "Shadow of Another World (All-Devouring Narwhal)";
       break;
     default:
       document.getElementById("phrase").innerHTML =
@@ -216,12 +228,12 @@ function copyToClipboard() {
   const errorPop = document.getElementById('err-popup');
   // Create a Clipboard API writeText request
   navigator.clipboard.writeText(text)
-      .then(function() {
-          successPop.classList.add('pop-show');
-          setTimeout(() => {successPop.classList.remove('pop-show')}, 1200);
-      })
-      .catch(function(err) {
-        errorPop.classList.add('pop-show');
-        setTimeout(() => {errorPop.classList.remove('pop-show')}, 1200);
-      });
+    .then(function () {
+      successPop.classList.add('pop-show');
+      setTimeout(() => { successPop.classList.remove('pop-show') }, 1200);
+    })
+    .catch(function (err) {
+      errorPop.classList.add('pop-show');
+      setTimeout(() => { errorPop.classList.remove('pop-show') }, 1200);
+    });
 }

@@ -231,6 +231,9 @@
   .dendro-button {
     background-color: var(--dendro-theme);
   }
+  .hydro-button {
+    background-color: var(--hydro-theme);
+  }
   .result-value {
     font-size: 20px;
     line-height: 1.6em;
